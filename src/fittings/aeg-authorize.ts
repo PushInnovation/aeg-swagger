@@ -1,7 +1,7 @@
 import parseParam from '../parse-param';
 import PermissionDeniedError from '../permission-denied-error';
 import UnauthorizedError from '../unauthorized-error';
-import { Token } from '@adexchange/aeg-security';
+import { Token } from '@push_innovation/aeg-security';
 import { EventEmitter } from 'events';
 import SecurityToken from '../security-token';
 import { ISwaggerContext } from '../types/types';

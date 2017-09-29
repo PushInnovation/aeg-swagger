@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import Segment from '@adexchange/aeg-xray/lib/segment';
+import Segment from '@push_innovation/aeg-xray/lib/segment';
 
 export interface ISwaggerContext {
 	request: ISwaggerRequest;

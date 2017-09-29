@@ -1,4 +1,4 @@
-import { Token } from '@adexchange/aeg-security';
+import { Token } from '@push_innovation/aeg-security';
 import { EventEmitter } from 'events';
 import SecurityToken from './security-token';
 
