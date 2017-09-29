@@ -1,6 +1,6 @@
 import PermissionDeniedError from './permission-denied-error';
 import UnauthorizedError from './unauthorized-error';
-import { Token } from '@adexchange/aeg-security';
+import { Token } from '@push_innovation/aeg-security';
 import * as njwt from 'njwt';
 import * as _ from 'lodash';
 import * as BBPromise from 'bluebird';
