@@ -9,16 +9,6 @@ import { ISwaggerContext } from '../types/types';
  */
 export default class AegAccount extends EventEmitter {
 
-	private _securityService: SecurityService;
-
-	constructor () {
-
-		super();
-
-		this._securityService = new SecurityService();
-
-	}
-
 	/**
 	 * Get the fitting
 	 */
@@ -65,9 +55,10 @@ export default class AegAccount extends EventEmitter {
 
 		if (req.headers.authorization) {
 
+			const securityService = new SecurityService();
 			const accessToken = Token.parseTokenFromAuthorization(req.headers.authorization);
-			self._securityService.setToken(accessToken);
-			const result = await self._securityService.getAccount();
+			securityService.setToken(accessToken);
+			const result = await securityService.getAccount();
 
 			if (!req.account) {
 
