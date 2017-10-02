@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "@push_innovation/aeg-sdk": "0.0.4",
-    "@push_innovation/aeg-security": "0.0.4",
+    "@push_innovation/aeg-security": "0.0.6",
     "@push_innovation/aeg-xray": "0.0.6",
     "bluebird": "^3.5.0",
     "config": "^1.26.1",
