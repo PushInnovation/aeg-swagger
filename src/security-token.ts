@@ -1,13 +1,9 @@
 import PermissionDeniedError from './permission-denied-error';
 import UnauthorizedError from './unauthorized-error';
-import { Token } from '@push_innovation/aeg-security';
+import { Token, ITokenOrganization } from '@push_innovation/aeg-security';
 import * as njwt from 'njwt';
 import * as _ from 'lodash';
 import * as BBPromise from 'bluebird';
-
-export interface IOrganization {
-	nameKey: string;
-}
 
 const invalidToken = 'Invalid token';
 const expiredToken = 'Expired token';
@@ -26,7 +22,7 @@ export default class SecurityToken {
 
 	private _env: string | null;
 
-	private _organization: IOrganization | null;
+	private _organization: ITokenOrganization | null;
 
 	/**
 	 * Constructor
@@ -44,7 +40,7 @@ export default class SecurityToken {
 	/**
 	 * Get the organization
 	 */
-	public get organization (): IOrganization | null {
+	public get organization (): ITokenOrganization | null {
 
 		return this._organization;
 
