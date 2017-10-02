@@ -1,6 +1,9 @@
 import { EventEmitter } from 'events';
+<<<<<<< HEAD
 import { securityApi } from '@push_innovation/aeg-sdk';
 import { Token } from '@push_innovation/aeg-security';
+=======
+>>>>>>> dev-aeg
 import { ISwaggerContext } from '../types/types';
 import SwaggerValidationError from '../swagger-validation-error';
 
