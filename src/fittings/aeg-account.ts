@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events';
-import { securityApi } from '@adexchange/aeg-sdk';
+import { SecurityService } from '@adexchange/aeg-sdk';
 import * as _ from 'lodash';
 import { Token } from '@adexchange/aeg-security';
 import { ISwaggerContext } from '../types/types';
@@ -8,6 +8,16 @@ import { ISwaggerContext } from '../types/types';
  * Swagger bagpipes fitting to populate the request's full account
  */
 export default class AegAccount extends EventEmitter {
+
+	private _securityService: SecurityService;
+
+	constructor () {
+
+		super();
+
+		this._securityService = new SecurityService();
+
+	}
 
 	/**
 	 * Get the fitting
@@ -56,8 +66,8 @@ export default class AegAccount extends EventEmitter {
 		if (req.headers.authorization) {
 
 			const accessToken = Token.parseTokenFromAuthorization(req.headers.authorization);
-			securityApi.setToken(accessToken);
-			const result = await securityApi.getAccount();
+			self._securityService.setToken(accessToken);
+			const result = await self._securityService.getAccount();
 
 			if (!req.account) {
 

@@ -59,8 +59,8 @@
     "typescript": "^2.4.1"
   },
   "dependencies": {
-    "@adexchange/aeg-sdk": "0.0.210",
-    "@adexchange/aeg-security": "0.0.38",
+    "@adexchange/aeg-sdk": "0.0.579",
+    "@adexchange/aeg-security": "0.0.46",
     "@adexchange/aeg-xray": "0.0.47",
     "bluebird": "^3.5.0",
     "config": "^1.26.1",
